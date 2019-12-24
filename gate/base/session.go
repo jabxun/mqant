@@ -200,8 +200,17 @@ func (this *sessionagent) update(s gate.Session) error {
 }
 
 func (this *sessionagent) Serializable() ([]byte, error) {
-	tmp :=this.Clone()
-	data, err := proto.Marshal(tmp.session)
+	se := &SessionImp{
+		IP:        this.session.IP,
+		Network:   this.session.Network,
+		UserId:    this.session.UserId,
+		SessionId: this.session.SessionId,
+		ServerId:  this.session.ServerId,
+		TraceId:   this.session.TraceId,
+		SpanId:    utils.GenerateID().String(),
+		Settings:  this.session.Settings,
+	}
+	data, err := proto.Marshal(se)
 	if err != nil {
 		return nil, err
 	} // 进行解码
@@ -209,8 +218,17 @@ func (this *sessionagent) Serializable() ([]byte, error) {
 }
 
 func (this *sessionagent) Marshal() ([]byte, error) {
-	tmp :=this.Clone()
-	data, err := proto.Marshal(tmp.session)
+	se := &SessionImp{
+		IP:        this.session.IP,
+		Network:   this.session.Network,
+		UserId:    this.session.UserId,
+		SessionId: this.session.SessionId,
+		ServerId:  this.session.ServerId,
+		TraceId:   this.session.TraceId,
+		SpanId:    utils.GenerateID().String(),
+		Settings:  this.session.Settings,
+	}
+	data, err := proto.Marshal(se)
 	if err != nil {
 		return nil, err
 	} // 进行解码
