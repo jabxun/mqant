@@ -198,6 +198,13 @@ func (this *sessionagent) update(s gate.Session) error {
 	this.session.Settings = Settings
 	return nil
 }
+func DeepCopy(value map[string]string) map[string]string {
+	newMap := map[string]string{}
+	for k, v := range value {
+		newMap[k] = v
+	}
+	return value
+}
 
 func (this *sessionagent) Serializable() ([]byte, error) {
 	se := &SessionImp{
@@ -208,7 +215,7 @@ func (this *sessionagent) Serializable() ([]byte, error) {
 		ServerId:  this.session.ServerId,
 		TraceId:   this.session.TraceId,
 		SpanId:    utils.GenerateID().String(),
-		Settings:  this.session.Settings,
+		Settings:  DeepCopy(this.session.Settings),
 	}
 	data, err := proto.Marshal(se)
 	if err != nil {
@@ -226,7 +233,7 @@ func (this *sessionagent) Marshal() ([]byte, error) {
 		ServerId:  this.session.ServerId,
 		TraceId:   this.session.TraceId,
 		SpanId:    utils.GenerateID().String(),
-		Settings:  this.session.Settings,
+		Settings:  DeepCopy(this.session.Settings),
 	}
 	data, err := proto.Marshal(se)
 	if err != nil {
