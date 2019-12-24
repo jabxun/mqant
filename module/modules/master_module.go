@@ -5,10 +5,10 @@ package modules
 
 import (
 	"encoding/json"
-	"github.com/liangdas/mqant/conf"
-	"github.com/liangdas/mqant/module"
-	"github.com/liangdas/mqant/module/base"
-	"github.com/liangdas/mqant/module/modules/master"
+	"github.com/jabxun/mqant/conf"
+	"github.com/jabxun/mqant/module"
+	"github.com/jabxun/mqant/module/base"
+	"github.com/jabxun/mqant/module/modules/master"
 	"io"
 	"io/ioutil"
 	"net"

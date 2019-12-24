@@ -15,7 +15,7 @@ package mqrpc
 
 import (
 	"context"
-	"github.com/liangdas/mqant/rpc/pb"
+	"github.com/jabxun/mqant/rpc/pb"
 	"reflect"
 )
 

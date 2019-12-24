@@ -13,7 +13,7 @@
 // limitations under the License.
 package log
 
-import "github.com/liangdas/mqant/utils"
+import "github.com/jabxun/mqant/utils"
 
 // A SpanID refers to a single span.
 type TraceSpan interface {

@@ -15,10 +15,10 @@ package module
 
 import (
 	"context"
-	"github.com/liangdas/mqant/conf"
-	"github.com/liangdas/mqant/registry"
-	"github.com/liangdas/mqant/rpc"
-	"github.com/liangdas/mqant/selector"
+	"github.com/jabxun/mqant/conf"
+	"github.com/jabxun/mqant/registry"
+	"github.com/jabxun/mqant/rpc"
+	"github.com/jabxun/mqant/selector"
 	"github.com/nats-io/nats.go"
 )
 

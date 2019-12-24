@@ -14,9 +14,9 @@
 package basemodule
 
 import (
-	"github.com/liangdas/mqant/conf"
-	"github.com/liangdas/mqant/log"
-	"github.com/liangdas/mqant/module"
+	"github.com/jabxun/mqant/conf"
+	"github.com/jabxun/mqant/log"
+	"github.com/jabxun/mqant/module"
 	"runtime"
 	"sync"
 )

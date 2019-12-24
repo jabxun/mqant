@@ -15,8 +15,8 @@ package master
 
 import (
 	"fmt"
-	"github.com/liangdas/mqant/conf"
-	"github.com/liangdas/mqant/log"
+	"github.com/jabxun/mqant/conf"
+	"github.com/jabxun/mqant/log"
 	"net"
 	"os/exec"
 	"strconv"

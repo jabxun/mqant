@@ -3,9 +3,9 @@ package server
 
 import (
 	"context"
-	"github.com/liangdas/mqant/conf"
-	"github.com/liangdas/mqant/module"
-	"github.com/liangdas/mqant/rpc"
+	"github.com/jabxun/mqant/conf"
+	"github.com/jabxun/mqant/module"
+	"github.com/jabxun/mqant/rpc"
 	"github.com/pborman/uuid"
 )
 

@@ -14,8 +14,8 @@
 package gate
 
 import (
-	"github.com/liangdas/mqant/log"
-	"github.com/liangdas/mqant/network"
+	"github.com/jabxun/mqant/log"
+	"github.com/jabxun/mqant/network"
 	"time"
 )
 

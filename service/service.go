@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/liangdas/mqant/log"
-	"github.com/liangdas/mqant/server"
+	"github.com/jabxun/mqant/log"
+	"github.com/jabxun/mqant/server"
 )
 
 func NewService(opts ...Option) Service {

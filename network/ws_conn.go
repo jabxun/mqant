@@ -15,7 +15,7 @@ package network
 
 //
 //import (
-//	//"github.com/liangdas/mqant/log"
+//	//"github.com/jabxun/mqant/log"
 //	"bytes"
 //	"io"
 //	"net"

@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/liangdas/mqant/utils/msgpack.v2/codes"
+	"github.com/jabxun/mqant/utils/msgpack.v2/codes"
 )
 
 var extTypes []reflect.Type

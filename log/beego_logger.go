@@ -16,7 +16,7 @@ package log
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/liangdas/mqant/log/beego"
+	"github.com/jabxun/mqant/log/beego"
 )
 
 func NewBeegoLogger(debug bool, ProcessID string, Logdir string, settings map[string]interface{}) *logs.BeeLogger {

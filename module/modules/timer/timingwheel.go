@@ -2,7 +2,7 @@ package timewheel
 
 import (
 	"container/list"
-	"github.com/liangdas/mqant/log"
+	"github.com/jabxun/mqant/log"
 	"math"
 	"time"
 )

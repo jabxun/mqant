@@ -17,12 +17,12 @@ import (
 	"context"
 	"fmt"
 	"github.com/golang/protobuf/proto"
-	"github.com/liangdas/mqant/log"
-	"github.com/liangdas/mqant/module"
-	"github.com/liangdas/mqant/rpc"
-	"github.com/liangdas/mqant/rpc/pb"
-	"github.com/liangdas/mqant/rpc/util"
-	"github.com/liangdas/mqant/utils/uuid"
+	"github.com/jabxun/mqant/log"
+	"github.com/jabxun/mqant/module"
+	"github.com/jabxun/mqant/rpc"
+	"github.com/jabxun/mqant/rpc/pb"
+	"github.com/jabxun/mqant/rpc/util"
+	"github.com/jabxun/mqant/utils/uuid"
 	"time"
 )
 

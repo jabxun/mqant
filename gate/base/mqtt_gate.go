@@ -18,12 +18,12 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/liangdas/mqant/conf"
-	"github.com/liangdas/mqant/gate"
-	"github.com/liangdas/mqant/log"
-	"github.com/liangdas/mqant/module"
-	"github.com/liangdas/mqant/module/base"
-	"github.com/liangdas/mqant/network"
+	"github.com/jabxun/mqant/conf"
+	"github.com/jabxun/mqant/gate"
+	"github.com/jabxun/mqant/log"
+	"github.com/jabxun/mqant/module"
+	"github.com/jabxun/mqant/module/base"
+	"github.com/jabxun/mqant/network"
 )
 
 var RPC_PARAM_SESSION_TYPE = gate.RPC_PARAM_SESSION_TYPE

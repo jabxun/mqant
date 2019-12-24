@@ -3,7 +3,7 @@ package mock
 import (
 	"testing"
 
-	"github.com/liangdas/mqant/registry"
+	"github.com/jabxun/mqant/registry"
 )
 
 var (

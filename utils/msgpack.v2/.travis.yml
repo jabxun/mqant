@@ -13,4 +13,4 @@ matrix:
 install:
   - go get gopkg.in/check.v1
   - mkdir -p $HOME/gopath/src/gopkg.in/vmihailenco
-  - mv `pwd` $HOME/gopath/src/github.com/liangdas/mqant/utils/msgpack.v2
+  - mv `pwd` $HOME/gopath/src/github.com/jabxun/mqant/utils/msgpack.v2

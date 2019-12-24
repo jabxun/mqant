@@ -1,10 +1,10 @@
 package module
 
 import (
-	"github.com/liangdas/mqant/registry"
-	"github.com/liangdas/mqant/rpc"
-	"github.com/liangdas/mqant/rpc/pb"
-	"github.com/liangdas/mqant/selector"
+	"github.com/jabxun/mqant/registry"
+	"github.com/jabxun/mqant/rpc"
+	"github.com/jabxun/mqant/rpc/pb"
+	"github.com/jabxun/mqant/selector"
 	"github.com/nats-io/nats.go"
 	"time"
 )

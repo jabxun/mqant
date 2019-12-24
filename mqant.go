@@ -14,8 +14,8 @@
 package mqant
 
 import (
-	"github.com/liangdas/mqant/app"
-	"github.com/liangdas/mqant/module"
+	"github.com/jabxun/mqant/app"
+	"github.com/jabxun/mqant/module"
 )
 
 func CreateApp(opts ...module.Option) module.App {

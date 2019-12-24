@@ -19,7 +19,7 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/liangdas/mqant/log"
+	"github.com/jabxun/mqant/log"
 	"io"
 )
 

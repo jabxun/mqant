@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/belogik/goes"
-	logs "github.com/liangdas/mqant/log/beego"
+	logs "github.com/jabxun/mqant/log/beego"
 )
 
 // NewES return a LoggerInterface

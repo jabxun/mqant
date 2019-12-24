@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
-	logs "github.com/liangdas/mqant/log/beego"
+	logs "github.com/jabxun/mqant/log/beego"
 )
 
 const (

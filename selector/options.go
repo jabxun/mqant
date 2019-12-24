@@ -3,7 +3,7 @@ package selector
 import (
 	"context"
 
-	"github.com/liangdas/mqant/registry"
+	"github.com/jabxun/mqant/registry"
 )
 
 type Options struct {

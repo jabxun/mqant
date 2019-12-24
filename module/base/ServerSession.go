@@ -15,10 +15,10 @@ package basemodule
 
 import (
 	"context"
-	"github.com/liangdas/mqant/module"
-	"github.com/liangdas/mqant/registry"
-	"github.com/liangdas/mqant/rpc"
-	"github.com/liangdas/mqant/rpc/base"
+	"github.com/jabxun/mqant/module"
+	"github.com/jabxun/mqant/registry"
+	"github.com/jabxun/mqant/rpc"
+	"github.com/jabxun/mqant/rpc/base"
 )
 
 func NewServerSession(app module.App, name string, node *registry.Node) (module.ServerSession, error) {

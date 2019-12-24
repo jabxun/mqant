@@ -19,11 +19,11 @@ import (
 	"sync"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/liangdas/mqant/gate"
-	"github.com/liangdas/mqant/log"
-	"github.com/liangdas/mqant/module"
-	mqrpc "github.com/liangdas/mqant/rpc"
-	"github.com/liangdas/mqant/utils"
+	"github.com/jabxun/mqant/gate"
+	"github.com/jabxun/mqant/log"
+	"github.com/jabxun/mqant/module"
+	mqrpc "github.com/jabxun/mqant/rpc"
+	"github.com/jabxun/mqant/utils"
 )
 
 type sessionagent struct {

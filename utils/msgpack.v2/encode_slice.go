@@ -3,7 +3,7 @@ package msgpack
 import (
 	"reflect"
 
-	"github.com/liangdas/mqant/utils/msgpack.v2/codes"
+	"github.com/jabxun/mqant/utils/msgpack.v2/codes"
 )
 
 func encodeStringValue(e *Encoder, v reflect.Value) error {

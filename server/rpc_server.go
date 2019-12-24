@@ -1,13 +1,13 @@
 package server
 
 import (
-	"github.com/liangdas/mqant/conf"
-	"github.com/liangdas/mqant/log"
-	"github.com/liangdas/mqant/module"
-	"github.com/liangdas/mqant/registry"
-	"github.com/liangdas/mqant/rpc"
-	"github.com/liangdas/mqant/rpc/base"
-	"github.com/liangdas/mqant/utils/lib/addr"
+	"github.com/jabxun/mqant/conf"
+	"github.com/jabxun/mqant/log"
+	"github.com/jabxun/mqant/module"
+	"github.com/jabxun/mqant/registry"
+	"github.com/jabxun/mqant/rpc"
+	"github.com/jabxun/mqant/rpc/base"
+	"github.com/jabxun/mqant/utils/lib/addr"
 	"strconv"
 	"strings"
 	"sync"

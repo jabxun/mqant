@@ -17,8 +17,8 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/liangdas/mqant/gate"
-	"github.com/liangdas/mqant/log"
+	"github.com/jabxun/mqant/gate"
+	"github.com/jabxun/mqant/log"
 	"github.com/pkg/errors"
 	"strings"
 	"sync"
