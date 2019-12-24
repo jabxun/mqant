@@ -215,8 +215,8 @@ func (this *sessionagent) Serializable() ([]byte, error) {
 		ServerId:  this.session.ServerId,
 		TraceId:   this.session.TraceId,
 		SpanId:    utils.GenerateID().String(),
-		Settings:  DeepCopy(this.session.Settings),
 	}
+	se.Settings = DeepCopy(this.session.Settings)
 	data, err := proto.Marshal(se)
 	if err != nil {
 		return nil, err
@@ -233,8 +233,8 @@ func (this *sessionagent) Marshal() ([]byte, error) {
 		ServerId:  this.session.ServerId,
 		TraceId:   this.session.TraceId,
 		SpanId:    utils.GenerateID().String(),
-		Settings:  DeepCopy(this.session.Settings),
 	}
+	se.Settings = DeepCopy(this.session.Settings)
 	data, err := proto.Marshal(se)
 	if err != nil {
 		return nil, err
