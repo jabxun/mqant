@@ -200,7 +200,8 @@ func (this *sessionagent) update(s gate.Session) error {
 }
 
 func (this *sessionagent) Serializable() ([]byte, error) {
-	data, err := proto.Marshal(this.session)
+	tmp :=this.Clone()
+	data, err := proto.Marshal(tmp.session)
 	if err != nil {
 		return nil, err
 	} // 进行解码
@@ -208,7 +209,8 @@ func (this *sessionagent) Serializable() ([]byte, error) {
 }
 
 func (this *sessionagent) Marshal() ([]byte, error) {
-	data, err := proto.Marshal(this.session)
+	tmp :=this.Clone()
+	data, err := proto.Marshal(tmp.session)
 	if err != nil {
 		return nil, err
 	} // 进行解码
