@@ -207,15 +207,14 @@ func DeepCopy(value map[string]string) map[string]string {
 }
 
 func (this *sessionagent) Serializable() ([]byte, error) {
-	se := &SessionImp{
-		IP:        this.session.IP,
-		Network:   this.session.Network,
-		UserId:    this.session.UserId,
-		SessionId: this.session.SessionId,
-		ServerId:  this.session.ServerId,
-		TraceId:   this.session.TraceId,
-		SpanId:    utils.GenerateID().String(),
-	}
+	se := new(SessionImp)
+	se.IP=        this.session.IP
+	se.Network =    this.session.Network;
+	se.UserId =this.session.UserId;
+	se.SessionId= this.session.SessionId
+	se.ServerId=  this.session.ServerId
+	se.TraceId=   this.session.TraceId
+	se.SpanId=    utils.GenerateID().String()
 	se.Settings = DeepCopy(this.session.Settings)
 	data, err := proto.Marshal(se)
 	if err != nil {
@@ -225,15 +224,14 @@ func (this *sessionagent) Serializable() ([]byte, error) {
 }
 
 func (this *sessionagent) Marshal() ([]byte, error) {
-	se := &SessionImp{
-		IP:        this.session.IP,
-		Network:   this.session.Network,
-		UserId:    this.session.UserId,
-		SessionId: this.session.SessionId,
-		ServerId:  this.session.ServerId,
-		TraceId:   this.session.TraceId,
-		SpanId:    utils.GenerateID().String(),
-	}
+	se := new(SessionImp)
+	se.IP=        this.session.IP
+	se.Network =    this.session.Network;
+	se.UserId =this.session.UserId;
+	se.SessionId= this.session.SessionId
+	se.ServerId=  this.session.ServerId
+	se.TraceId=   this.session.TraceId
+	se.SpanId=    utils.GenerateID().String()
 	se.Settings = DeepCopy(this.session.Settings)
 	data, err := proto.Marshal(se)
 	if err != nil {
