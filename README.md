@@ -13,6 +13,8 @@ mqant是一款基于Golang语言的简洁,高效,高性能的分布式微服务�
 [Node、PHP、Java 和 Go 服务端 I/O 性能PK](http://blog.csdn.net/listen2you/article/details/72935679)
 
 
+
+
 #	特性
 1. 高性能分布式
 2. 支持分布式服务注册发现,是一款功能完整的微服务框架
