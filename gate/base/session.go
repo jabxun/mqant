@@ -175,14 +175,16 @@ func (this *sessionagent) updateMap(s map[string]interface{}) error {
 	}
 	Settings := s["Settings"]
 	if Settings != nil {
+		this.lock.Lock()
 		this.session.Settings = Settings.(map[string]string)
+		this.lock.Unlock()
 	}
 	return nil
 }
 
 func (this *sessionagent) update(s gate.Session) error {
-	this.lock.Lock()
-	defer this.lock.Unlock()
+
+
 	Userid := s.GetUserId()
 	this.session.UserId = Userid
 	IP := s.GetIP()
@@ -195,7 +197,9 @@ func (this *sessionagent) update(s gate.Session) error {
 	Serverid := s.GetServerId()
 	this.session.ServerId = Serverid
 	Settings := s.GetSettings()
+	this.lock.Lock()
 	this.session.Settings = Settings
+	this.lock.Unlock()
 	return nil
 }
 func DeepCopy(value map[string]string) map[string]string {
@@ -233,7 +237,9 @@ func (this *sessionagent) Unmarshal(data []byte) error {
 	} // 测试结果
 	this.session = se
 	if this.session.GetSettings() == nil {
+		this.lock.Lock()
 		this.session.Settings = make(map[string]string)
+		this.lock.Unlock()
 	}
 	return nil
 }
@@ -493,6 +499,12 @@ func (this *sessionagent) Close() (err string) {
 每次rpc调用都拷贝一份新的Session进行传输
 */
 func (this *sessionagent) Clone() gate.Session {
+	this.lock.Lock()
+	tmp := map[string]string{}
+	for k, v := range this.session.Settings {
+		tmp[k] = v
+	}
+	this.lock.Unlock()
 	agent := &sessionagent{
 		app:      this.app,
 		userdata: this.userdata,
@@ -506,7 +518,7 @@ func (this *sessionagent) Clone() gate.Session {
 		ServerId:  this.session.ServerId,
 		TraceId:   this.session.TraceId,
 		SpanId:    utils.GenerateID().String(),
-		Settings:  this.session.Settings,
+		Settings:  tmp,
 	}
 	agent.session = se
 	return agent
