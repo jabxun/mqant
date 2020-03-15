@@ -207,16 +207,9 @@ func DeepCopy(value map[string]string) map[string]string {
 }
 
 func (this *sessionagent) Serializable() ([]byte, error) {
-	se := new(SessionImp)
-	se.IP=        this.session.IP
-	se.Network =    this.session.Network;
-	se.UserId =this.session.UserId;
-	se.SessionId= this.session.SessionId
-	se.ServerId=  this.session.ServerId
-	se.TraceId=   this.session.TraceId
-	se.SpanId=    utils.GenerateID().String()
-	se.Settings = DeepCopy(this.session.Settings)
-	data, err := proto.Marshal(se)
+	this.lock.RLock()
+	data, err := proto.Marshal(this.session)
+	this.lock.RUnlock()
 	if err != nil {
 		return nil, err
 	} // 进行解码
@@ -224,16 +217,9 @@ func (this *sessionagent) Serializable() ([]byte, error) {
 }
 
 func (this *sessionagent) Marshal() ([]byte, error) {
-	se := new(SessionImp)
-	se.IP=        this.session.IP
-	se.Network =    this.session.Network;
-	se.UserId =this.session.UserId;
-	se.SessionId= this.session.SessionId
-	se.ServerId=  this.session.ServerId
-	se.TraceId=   this.session.TraceId
-	se.SpanId=    utils.GenerateID().String()
-	se.Settings = DeepCopy(this.session.Settings)
-	data, err := proto.Marshal(se)
+	this.lock.RLock()
+	data, err := proto.Marshal(this.session)
+	this.lock.RUnlock()
 	if err != nil {
 		return nil, err
 	} // 进行解码
